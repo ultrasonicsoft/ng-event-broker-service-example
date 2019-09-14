@@ -6,7 +6,7 @@ import { EventEmitter } from '@angular/core';
   providedIn: EventBrokerModule
 })
 export class EventBrokerService {
-  allEvents: { [id: string]: EventEmitter<any>; } = {};
+  private allEvents: { [id: string]: EventEmitter<any>; } = {};
 
   constructor() {
     console.log('EventBrokerService initialized...');
@@ -21,7 +21,7 @@ export class EventBrokerService {
 
   publishEvent(eventName: string, payload: any = {}) {
     if (!this.allEvents[eventName]) {
-      console.error('event not registered...');
+      console.error(`${eventName} event not registered...`);
       return;
     }
     console.debug(`${eventName} event published.`);
@@ -30,9 +30,13 @@ export class EventBrokerService {
 
   subscribeEvent(eventName: string) {
     if (!this.allEvents[eventName]) {
-      console.error('event not registered...');
+      console.error(`${eventName} event not registered...`);
       return;
     }
     return this.allEvents[eventName];
+  }
+
+  clearEvents() {
+    this.allEvents = {};
   }
 }

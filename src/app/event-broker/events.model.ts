@@ -1,4 +1,8 @@
 export const Events = {
   loginFailed: 'loginFailed',
-  loginSuccessful: 'loginSuccessful'
+  loginSuccessful: 'loginSuccessful',
+  logout:'logout',
+  productAdded:'productAdded',
+  productRemoved:'productRemoved',
+  cartCountUpdated: 'cartCountUpdated'
 }

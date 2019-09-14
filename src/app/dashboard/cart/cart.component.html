@@ -1,0 +1,7 @@
+<h3>Cart</h3>
+
+<h4>Cart items:</h4>
+
+<div *ngFor="let item of cartItems">
+  {{item}} <button (click)="removeItem(item)">Remove</button>
+</div>
