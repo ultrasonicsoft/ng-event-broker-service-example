@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Events } from 'src/app/event-broker/events.model';
+import { EventBrokerService } from 'src/app/event-broker/event-broker.service';
 
 @Component({
   selector: 'app-product-ipod',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductIpodComponent implements OnInit {
 
-  constructor() { }
+  constructor(private eventService: EventBrokerService) { }
 
   ngOnInit() {
+  }
+
+  addProduct(){
+    this.eventService.publishEvent(Events.productAdded, 'iPod');
   }
 
 }
