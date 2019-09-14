@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventBrokerService } from '../event-broker/event-broker.service';
 import { Events } from '../event-broker/events.model';
+import { CartService } from './cart.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +12,8 @@ export class DashboardComponent implements OnInit {
 
   cart = new Array<string>();
 
-  constructor(private eventService: EventBrokerService) { }
+  constructor(private eventService: EventBrokerService,
+    private cartService: CartService) { }
 
   ngOnInit() {
     this.eventService.subscribeEvent(Events.productAdded).subscribe((payload: string) => this.onProductAdded(payload));

@@ -9,13 +9,13 @@ export class EventBrokerService {
   private allEvents: { [id: string]: EventEmitter<any>; } = {};
 
   constructor() {
-    console.log('EventBrokerService initialized...');
+    console.debug('EventBrokerService initialized...');
   }
 
   registerEvent(eventName: string) {
     if (!this.allEvents[eventName]) {
       this.allEvents[eventName] = new EventEmitter();
-      console.log(`${eventName} event registered...`);
+      console.debug(`${eventName} event registered...`);
     }
   }
 
