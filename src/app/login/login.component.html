@@ -1,3 +1,14 @@
-<p>login works!</p>
-<button (click)="loginSuccessful()">Login Successful</button>
-<button (click)="loginFailed()">Login Failed</button>
+<h2>Login</h2>
+<form #loginForm="ngForm" (ngSubmit)="login()">
+  <div>
+    <input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone:true}" placeholder="Enter username">
+  </div>
+  <div>
+    <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone:true}" placeholder="Enter password">
+  </div>
+  <button type="submit">Login</button>
+
+  <div>
+    Test username:balram password: chavan
+  </div>
+</form>

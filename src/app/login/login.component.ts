@@ -9,16 +9,22 @@ import { Events } from '../event-broker/events.model';
 })
 export class LoginComponent implements OnInit {
 
+  username = '';
+  password = '';
+
   constructor(private eventService: EventBrokerService) { }
 
   ngOnInit() {
   }
 
-  loginSuccessful() {
-    this.eventService.publishEvent(Events.loginSuccessful);
+  login() {
+    if (this.username == 'balram' && this.password == 'chavan') {
+      this.eventService.publishEvent(Events.loginSuccessful);
+    }
+    else{
+      this.password = '';
+      alert('Incorrect username/password');
+    }
   }
-
-  loginFailed() {
-    this.eventService.publishEvent(Events.loginFailed);
-  }
+  
 }
