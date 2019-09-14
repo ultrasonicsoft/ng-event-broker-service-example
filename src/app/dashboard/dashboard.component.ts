@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EventBrokerService } from 'event-broker';
+import { EventBrokerService } from 'ng-event-broker';
 
 import { Events } from '../event-broker/events.model';
 import { CartService } from './cart.service';

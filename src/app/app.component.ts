@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { EventBrokerService } from 'event-broker';
+import { EventBrokerService } from 'ng-event-broker';
 
 import { Events } from './event-broker/events.model';
 import { Router } from '@angular/router';

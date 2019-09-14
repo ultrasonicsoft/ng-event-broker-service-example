@@ -1,5 +1,8 @@
 {
-  "name": "event-broker",
+  "name": "ng-event-broker",
+  "author": "ultrasonicsoft (Balram Chavan)",
+  "description": "EventBrokerService provide application level communication via events.",
+  "displayName": "Event Broker Service for Angular",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^8.1.3",

@@ -8,13 +8,11 @@ export class EventBrokerService {
   private allEvents: { [id: string]: EventEmitter<any>; } = {};
 
   constructor() {
-    console.debug('EventBrokerService initialized...');
   }
 
   registerEvent(eventName: string) {
     if (!this.allEvents[eventName]) {
       this.allEvents[eventName] = new EventEmitter();
-      console.debug(`${eventName} event registered...`);
     }
   }
 
@@ -23,7 +21,6 @@ export class EventBrokerService {
       console.error(`${eventName} event not registered...`);
       return;
     }
-    console.debug(`${eventName} event published.`);
     this.allEvents[eventName].next(payload);
   }
 
