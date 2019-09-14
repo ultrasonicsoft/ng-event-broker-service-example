@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { EventBrokerService } from 'src/app/event-broker/event-broker.service';
+import { EventBrokerService } from 'event-broker';
+
 import { Events } from 'src/app/event-broker/events.model';
 
 @Component({

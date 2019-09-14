@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EventBrokerModule } from './event-broker/event-broker.module';
+import { EventBrokerModule } from 'event-broker';
 
 @NgModule({
   declarations: [

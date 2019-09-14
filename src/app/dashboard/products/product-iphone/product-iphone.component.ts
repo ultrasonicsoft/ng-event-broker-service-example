@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Events } from 'src/app/event-broker/events.model';
-import { EventBrokerService } from 'src/app/event-broker/event-broker.service';
+import { EventBrokerService } from 'event-broker';
 
 @Component({
   selector: 'app-product-iphone',

@@ -115,6 +115,41 @@
           }
         }
       }
+    },
+    "event-broker": {
+      "projectType": "library",
+      "root": "projects/event-broker",
+      "sourceRoot": "projects/event-broker/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/event-broker/tsconfig.lib.json",
+            "project": "projects/event-broker/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/event-broker/src/test.ts",
+            "tsConfig": "projects/event-broker/tsconfig.spec.json",
+            "karmaConfig": "projects/event-broker/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/event-broker/tsconfig.lib.json",
+              "projects/event-broker/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "ng-event-broker-example"
 }

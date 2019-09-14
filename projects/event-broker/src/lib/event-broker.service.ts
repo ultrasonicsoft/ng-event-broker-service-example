@@ -1,6 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { EventBrokerModule } from './event-broker.module';
-import { EventEmitter } from '@angular/core';
 
 @Injectable({
   providedIn: EventBrokerModule
